@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingDefaultResource">
+    <color name="error_snack_bar_action">@color/secondaryColor</color>
+    <color name="error_snack_bar_text">@color/primaryTextColor</color>
+    <color name="error_snack_bar_background">@color/primaryLightColor</color>
 </resources>

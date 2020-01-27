@@ -1,2 +1,5 @@
 include ':app'
+
+include ':core'
+include ':coreUI'
 rootProject.name='gallery'

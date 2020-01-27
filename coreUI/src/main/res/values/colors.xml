@@ -1,0 +1,22 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<resources>
+    <color name="snow">#FAFAFA</color>
+    <color name="white">#FFF</color>
+    <color name="silver">#C7C7C7</color>
+    <color name="bittersweet">#FF6F59</color>
+    <!--    <color name="vivid_tangerine">#FFA186</color>-->
+    <color name="persian_red">#C63D2F</color>
+    <!--    <color name="ucla_blue">#577590</color>-->
+    <!--    <color name="livid">#6699CC</color>-->
+    <!--    <color name="very_light_malachite_green">#61E786</color>-->
+    <color name="black">#000</color>
+
+    <color name="primaryColor">@color/snow</color>
+    <color name="primaryLightColor">@color/white</color>
+    <color name="primaryDarkColor">@color/silver</color>
+    <color name="secondaryColor">@color/bittersweet</color>
+    <!--    <color name="secondaryLightColor">@color/vivid_tangerine</color>-->
+    <color name="secondaryDarkColor">@color/persian_red</color>
+    <color name="primaryTextColor">@color/black</color>
+    <!--    <color name="secondaryTextColor">@color/black</color>-->
+</resources>
