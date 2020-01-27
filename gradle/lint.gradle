@@ -1,0 +1,19 @@
+subprojects {
+    afterEvaluate {
+        if (plugins.hasPlugin("com.android.application") ||
+                plugins.hasPlugin("com.android.library")) {
+
+            android {
+                lintOptions {
+                    lintConfig file("${rootProject.projectDir}/lint.xml")
+
+                    htmlReport true
+                    abortOnError true
+                    warningsAsErrors true
+                    checkDependencies true // https://groups.google.com/forum/#!msg/lint-dev/RGTvK_uHQGQ/FjJA12aGBAAJ
+                    ignoreTestSources true // https://groups.google.com/forum/#!msg/lint-dev/RGTvK_uHQGQ/FjJA12aGBAAJ
+                }
+            }
+        }
+    }
+}
