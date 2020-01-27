@@ -1,0 +1,25 @@
+apply from: '../gradle/library-configuration.gradle'
+
+apply plugin: 'kotlin-kapt'
+
+android {
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    implementation project(':core')
+    implementation project(':coreUI')
+
+    api libraries.lifecycle
+
+    implementation libraries.koin
+    implementation libraries.koinViewModel
+    implementation libraries.coroutines
+    implementation libraries.constraintLayout
+    implementation libraries.materialComponents
+    implementation libraries.navigationFragment
+    implementation libraries.navigationUI
+    implementation libraries.coreKtx
+}

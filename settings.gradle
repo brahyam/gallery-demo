@@ -1,5 +1,8 @@
 include ':app'
 
+include ':featureImageList'
+
 include ':core'
 include ':coreUI'
+
 rootProject.name='gallery'

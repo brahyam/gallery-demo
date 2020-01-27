@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/root_navigation"
+    app:startDestination="@id/image_list_graph"
     tools:ignore="UnusedNavigation, InvalidNavigation">
 
+    <include app:graph="@navigation/image_list_graph" />
 
 </navigation>
