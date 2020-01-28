@@ -1,0 +1,17 @@
+apply from: '../gradle/library-configuration.gradle'
+
+apply plugin: 'kotlin-kapt'
+
+dependencies {
+    implementation project(':core')
+    implementation project(':rest')
+
+    implementation libraries.koin
+    implementation libraries.coroutines
+    implementation libraries.retrofit
+    implementation libraries.retrofitAdapter
+    implementation libraries.retrofitConverter
+    implementation libraries.moshi
+
+    kapt libraries.moshiCodegen
+}

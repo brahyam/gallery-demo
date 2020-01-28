@@ -1,0 +1,11 @@
+apply from: '../gradle/library-configuration.gradle'
+
+apply plugin: 'kotlin-kapt'
+
+dependencies {
+    implementation project(':core')
+    implementation project(':imageDomain')
+
+    implementation libraries.koin
+    implementation libraries.coroutines
+}

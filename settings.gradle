@@ -2,7 +2,12 @@ include ':app'
 
 include ':featureImageList'
 
+include ':imageUseCases'
+include ':imageDomain'
+
 include ':core'
 include ':coreUI'
+
+include ':rest'
 
 rootProject.name='gallery'

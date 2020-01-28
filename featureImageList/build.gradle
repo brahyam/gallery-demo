@@ -9,6 +9,8 @@ android {
 }
 
 dependencies {
+    implementation project(':imageUseCases')
+
     implementation project(':core')
     implementation project(':coreUI')
 

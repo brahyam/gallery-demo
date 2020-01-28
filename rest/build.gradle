@@ -1,0 +1,29 @@
+apply from: '../gradle/library-configuration.gradle'
+
+apply plugin: 'kotlin-kapt'
+
+android{
+    buildTypes {
+        debug {
+            buildConfigField("String", "BASE_URL", "\"https://m.mobile.de/svc/\"")
+        }
+        release {
+            buildConfigField("String", "BASE_URL", "\"https://m.mobile.de/svc/\"")
+        }
+    }
+}
+
+dependencies {
+    implementation project(':core')
+
+    implementation libraries.koin
+    implementation libraries.coroutines
+    implementation libraries.retrofit
+    implementation libraries.retrofitAdapter
+    implementation libraries.retrofitConverter
+    implementation libraries.moshi
+    implementation libraries.okHttp
+    implementation libraries.okHttpLogging
+
+    kapt libraries.moshiCodegen
+}
