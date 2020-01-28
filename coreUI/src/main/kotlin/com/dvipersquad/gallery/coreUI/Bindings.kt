@@ -1,13 +1,12 @@
 package com.dvipersquad.gallery.coreUI
 
-import android.graphics.drawable.Drawable
 import android.text.SpannableStringBuilder
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.databinding.BindingAdapter
 import androidx.databinding.BindingConversion
-import coil.api.load
+import com.bumptech.glide.Glide
 import com.google.android.material.textfield.TextInputEditText
 
 @BindingConversion
@@ -33,12 +32,5 @@ fun TextInputEditText.setText(value: TextSource?) {
 
 @BindingAdapter("src")
 fun setSrc(view: ImageView, src: String?) {
-    view.load(src)
-}
-
-@BindingAdapter("src", "placeholder")
-fun setSrc(view: ImageView, src: String?, placeholder: Drawable?) {
-    view.load(src) {
-        placeholder(placeholder)
-    }
+    Glide.with(view).load(src).into(view)
 }

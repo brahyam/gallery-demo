@@ -2,10 +2,9 @@ package com.dvipersquad.gallery.feature.image.list.list
 
 import android.content.Context
 import android.util.AttributeSet
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-
-private const val COLUMNS = 2
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import com.dvipersquad.gallery.feature.image.list.R
 
 internal class ImageList @JvmOverloads constructor(
     context: Context,
@@ -16,7 +15,8 @@ internal class ImageList @JvmOverloads constructor(
     private val imageListAdapter by lazy { ImageListAdapter() }
 
     init {
-        layoutManager = GridLayoutManager(context, COLUMNS)
+        layoutManager =
+            StaggeredGridLayoutManager(resources.getInteger(R.integer.grid_rows), VERTICAL)
         adapter = imageListAdapter.apply {
             setHasStableIds(true)
         }

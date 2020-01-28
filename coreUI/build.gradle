@@ -19,5 +19,5 @@ dependencies {
     implementation libraries.materialComponents
     implementation libraries.navigationFragment
     implementation libraries.coreKtx
-    implementation libraries.coil
+    implementation libraries.glide
 }

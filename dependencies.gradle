@@ -32,7 +32,7 @@ ext.versions = [
         retrofitAdapter              : '0.9.2',
         moshi                        : '1.9.2',
         okHttp                       : '4.3.0',
-        coil                         : '0.9.1',
+        glide                        : '4.11.0',
 
         junit                        : '4.12',
         testRunner                   : '1.2.0',
@@ -71,7 +71,7 @@ ext.libraries = [
         moshiCodegen           : "com.squareup.moshi:moshi-kotlin-codegen:$versions.moshi",
         okHttp                 : "com.squareup.okhttp3:okhttp:$versions.okHttp",
         okHttpLogging          : "com.squareup.okhttp3:logging-interceptor:$versions.okHttp",
-        coil                   : "io.coil-kt:coil:$versions.coil",
+        glide                  : "com.github.bumptech.glide:glide:$versions.glide",
 ]
 
 ext.testLibraries = [

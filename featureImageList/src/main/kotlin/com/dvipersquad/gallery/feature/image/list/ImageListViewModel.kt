@@ -15,12 +15,14 @@ class ImageListViewModel(
 ) : ActionViewModel(dispatchers) {
 
     val images = MutableLiveData<List<String>>()
+    val isLoading = MutableLiveData<Boolean>().apply { value = false }
 
     init {
         loadImages()
     }
 
     private fun loadImages() {
+        isLoading.postValue(true)
         launch(dispatchers.computation) {
             when (val result = getImages("237089773")) { //TODO: Inject item id
                 is Result.Success -> {
@@ -30,6 +32,7 @@ class ImageListViewModel(
                     postAction(CommonViewEvent.ShowErrorSnackBar(result.message))
                 }
             }
+            isLoading.postValue(false)
         }
     }
 
