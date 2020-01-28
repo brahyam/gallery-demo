@@ -1,0 +1,14 @@
+apply from: '../gradle/library-configuration.gradle'
+
+dependencies {
+    implementation project(':core')
+
+    implementation libraries.lifecycle
+    implementation libraries.coroutines
+
+    api testLibraries.junit
+    api testLibraries.mockitoCore
+    api testLibraries.mockitoKotlin
+    api testLibraries.mockitoInline
+    api testLibraries.archCore
+}

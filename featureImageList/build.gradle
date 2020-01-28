@@ -24,4 +24,6 @@ dependencies {
     implementation libraries.navigationFragment
     implementation libraries.navigationUI
     implementation libraries.coreKtx
+
+    testImplementation project(':test')
 }
