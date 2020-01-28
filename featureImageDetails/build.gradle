@@ -10,8 +10,6 @@ android {
 }
 
 dependencies {
-    implementation project(':imageUseCases')
-
     implementation project(':core')
     implementation project(':coreUI')
 
@@ -25,6 +23,8 @@ dependencies {
     implementation libraries.navigationFragment
     implementation libraries.navigationUI
     implementation libraries.coreKtx
+    implementation libraries.galleryView
+    implementation libraries.galleryViewLoader
 
     testImplementation project(':test')
 }

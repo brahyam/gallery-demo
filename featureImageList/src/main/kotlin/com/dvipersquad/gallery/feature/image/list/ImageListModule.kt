@@ -9,7 +9,8 @@ private val imageListModule = module {
     viewModel {
         ImageListViewModel(
             dispatchers = get(),
-            getImages = get()
+            getImages = get(),
+            imageListNavigator = get()
         )
     }
 }

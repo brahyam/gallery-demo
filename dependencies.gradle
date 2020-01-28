@@ -32,7 +32,8 @@ ext.versions = [
         retrofitAdapter              : '0.9.2',
         moshi                        : '1.9.2',
         okHttp                       : '4.3.0',
-        glide                        : '4.11.0',
+        glide                        : '4.8.0',
+        galleryView                  : '1.2.8',
 
         junit                        : '4.12',
         testRunner                   : '1.2.0',
@@ -72,6 +73,8 @@ ext.libraries = [
         okHttp                 : "com.squareup.okhttp3:okhttp:$versions.okHttp",
         okHttpLogging          : "com.squareup.okhttp3:logging-interceptor:$versions.okHttp",
         glide                  : "com.github.bumptech.glide:glide:$versions.glide",
+        galleryView            : "com.veinhorn.scrollgalleryview:library:$versions.galleryView",
+        galleryViewLoader      : "com.veinhorn.scrollgalleryview:glide-loader:$versions.galleryView",
 ]
 
 ext.testLibraries = [

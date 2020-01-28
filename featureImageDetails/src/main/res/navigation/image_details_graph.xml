@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/image_details_graph"
+    app:startDestination="@id/image_details_fragment"
+    tools:ignore="UnusedNavigation">
+
+    <fragment
+        android:id="@+id/image_details_fragment"
+        android:name="com.dvipersquad.gallery.feature.image.details.ImageDetailsFragment"
+        tools:layout="@layout/image_details_fragment">
+
+        <argument
+            android:name="imageDetailsInput"
+            app:argType="com.dvipersquad.gallery.feature.image.details.ImageDetailsInput" />
+    </fragment>
+</navigation>

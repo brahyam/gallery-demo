@@ -1,6 +1,7 @@
 include ':app'
 
 include ':featureImageList'
+include ':featureImageDetails'
 
 include ':imageUseCases'
 include ':imageDomain'

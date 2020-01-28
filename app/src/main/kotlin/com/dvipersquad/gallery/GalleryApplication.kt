@@ -1,6 +1,7 @@
 package com.dvipersquad.gallery
 
 import android.app.Application
+import com.dvipersquad.gallery.feature.image.details.imageDetailsModule
 import com.dvipersquad.gallery.feature.image.list.imageListFeatureModules
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
@@ -9,6 +10,7 @@ import timber.log.Timber
 
 class GalleryApplication : Application() {
     private val modules = imageListFeatureModules +
+            imageDetailsModule +
             appModule
 
 

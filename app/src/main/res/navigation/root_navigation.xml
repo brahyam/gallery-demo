@@ -7,5 +7,15 @@
     tools:ignore="UnusedNavigation, InvalidNavigation">
 
     <include app:graph="@navigation/image_list_graph" />
+    <include app:graph="@navigation/image_details_graph" />
+
+    <action
+        android:id="@+id/actionToImageDetails"
+        app:destination="@id/image_details_graph">
+
+        <argument
+            android:name="imageDetailsInput"
+            app:argType="com.dvipersquad.gallery.feature.image.details.ImageDetailsInput" />
+    </action>
 
 </navigation>

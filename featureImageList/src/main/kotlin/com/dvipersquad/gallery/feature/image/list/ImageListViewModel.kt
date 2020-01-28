@@ -5,13 +5,14 @@ import com.dvipersquad.gallery.core.CoroutineDispatchers
 import com.dvipersquad.gallery.core.Result
 import com.dvipersquad.gallery.coreUI.mvvm.actions.ActionViewModel
 import com.dvipersquad.gallery.coreUI.mvvm.actions.CommonViewEvent
+import com.dvipersquad.gallery.feature.image.list.navigation.ImageListNavigator
 import com.dvipersquad.gallery.image.usecases.GetImagesUseCase
 import kotlinx.coroutines.launch
-import timber.log.Timber
 
 class ImageListViewModel(
     dispatchers: CoroutineDispatchers,
-    val getImages: GetImagesUseCase
+    private val getImages: GetImagesUseCase,
+    private val imageListNavigator: ImageListNavigator
 ) : ActionViewModel(dispatchers) {
 
     val images = MutableLiveData<List<String>>()
@@ -37,6 +38,6 @@ class ImageListViewModel(
     }
 
     fun onImageClicked(image: String) {
-        Timber.d("image $image clicked")
+        imageListNavigator.navigateToImageDetails(images.value!!, images.value!!.indexOf(image))
     }
 }
