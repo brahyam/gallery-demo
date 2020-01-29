@@ -33,8 +33,11 @@ compatibility. To solve this is possible to write a custom image loader which al
 custom url for thumbnails improving loading speeds. For the future local images represented now as 
 strings should contain both the regular big url (_27.jpg) and the thumbnail url (_2.jpg) to optimize use in 
 different parts of the app.   
+* In case of network error the user would have to close and open again the app to reload the image.
+This can be solved adding pull to refresh component
  
  ### Next steps
  * Build my own image loader to be able to use latest glide library
  * Support thumbnails in the image list and image details to improve loading speeds
+ * Add pull to refresh component to the image list
   
