@@ -30,6 +30,7 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@color/silver"
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
             <com.dvipersquad.gallery.feature.image.list.list.ImageList
@@ -37,6 +38,7 @@
                 android:layout_height="match_parent"
                 bind:imageClickListener="@{viewModel::onImageClicked}"
                 bind:items="@{viewModel.images}"
+                android:clipToPadding="false"
                 tools:itemCount="2"
                 tools:listitem="@layout/image_item" />
 

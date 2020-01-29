@@ -2,8 +2,9 @@ package com.dvipersquad.gallery.feature.image.list.list
 
 import android.content.Context
 import android.util.AttributeSet
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import com.dvipersquad.gallery.coreUI.ItemOffsetDecoration
 import com.dvipersquad.gallery.feature.image.list.R
 
 internal class ImageList @JvmOverloads constructor(
@@ -16,10 +17,11 @@ internal class ImageList @JvmOverloads constructor(
 
     init {
         layoutManager =
-            StaggeredGridLayoutManager(resources.getInteger(R.integer.grid_rows), VERTICAL)
+            GridLayoutManager(context, resources.getInteger(R.integer.grid_rows))
         adapter = imageListAdapter.apply {
             setHasStableIds(true)
         }
+        addItemDecoration(ItemOffsetDecoration(context, R.dimen.spacing_xxsmall))
     }
 
     fun setItems(items: List<String>?) {
