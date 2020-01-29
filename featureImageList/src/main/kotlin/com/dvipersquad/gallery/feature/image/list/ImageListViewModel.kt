@@ -11,6 +11,7 @@ import kotlinx.coroutines.launch
 
 class ImageListViewModel(
     dispatchers: CoroutineDispatchers,
+    private val itemId: String,
     private val getImages: GetImagesUseCase,
     private val imageListNavigator: ImageListNavigator
 ) : ActionViewModel(dispatchers) {
@@ -25,7 +26,7 @@ class ImageListViewModel(
     private fun loadImages() {
         isLoading.postValue(true)
         launch(dispatchers.computation) {
-            when (val result = getImages("237089773")) { //TODO: Inject item id
+            when (val result = getImages(itemId)) {
                 is Result.Success -> {
                     images.postValue(result.value)
                 }
